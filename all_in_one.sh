@@ -20,7 +20,7 @@ export PATH
 #
 # ——————————————————————————————————————————————————————————————————————————————————
 #
-DATE_VERSION="v1.7.2-2024_08_12_19_02"
+DATE_VERSION="v1.7.3-2024_08_17_15_25"
 #
 # ——————————————————————————————————————————————————————————————————————————————————
 amilys_embyserver_latest_version=4.8.8.0
@@ -1574,8 +1574,8 @@ function test_disk_capacity() {
         WARN "您已设置跳过磁盘容量检测"
         INFO "磁盘容量：${free_size_G}G"
     else
-        if [ "$free_size" -le 188743680 ]; then
-            ERROR "空间剩余容量不够：${free_size_G}G 小于最低要求 180G"
+        if [ "$free_size" -le 230686720 ]; then
+            ERROR "空间剩余容量不够：${free_size_G}G 小于最低要求 220G"
             exit 1
         else
             INFO "磁盘容量：${free_size_G}G"
@@ -5996,7 +5996,7 @@ function main_return() {
         fi
     fi
     echo -e "${out_tips}1、安装/更新/卸载 小雅Alist & 账号管理        当前状态：$(judgment_container "${xiaoya_alist_name}")
-2、安装/卸载 小雅Emby全家桶                   当前状态：$(judgment_container "${xiaoya_emby_name}")
+2、安装/更新/卸载 小雅Emby全家桶              当前状态：$(judgment_container "${xiaoya_emby_name}")
 3、安装/卸载 小雅Jellyfin全家桶               当前状态：$(judgment_container "${xiaoya_jellyfin_name}")
 4、安装/更新/卸载 小雅助手（xiaoyahelper）    当前状态：$(judgment_container xiaoyakeeper)
 5、安装/更新/卸载 小雅Alist-TVBox（非原版）   当前状态：$(judgment_container "${xiaoya_tvbox_name}")
